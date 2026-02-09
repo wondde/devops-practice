@@ -2,6 +2,8 @@
 
 Flutter 프로젝트를 빠르게 시작할 수 있는 심플한 템플릿
 
+greetings 테스트
+
 ## ⚙️ Setup (설정)
 
 - **[Flutter 환경 설정](docs/setup/FLUTTER_SETUP.md)** - Flutter 개발 환경 구축
