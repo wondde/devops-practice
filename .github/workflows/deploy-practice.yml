@@ -22,7 +22,7 @@ jobs:
       # 스텝 1에서 계산하고 출력함..
       - id: calculate
         run: |
-          Result = $((5+3))
+          Result=$((5+3))
           echo "result=$Result" >> $GITHUB_OUTPUT
 
       # 스텝2 사용
