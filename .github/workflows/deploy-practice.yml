@@ -18,6 +18,8 @@ jobs:
 
   example:
     runs-on: ubuntu-latest
+    outputs:
+      result: ${{ steps.calculate.outputs.result }}
     steps:
       # 스텝 1에서 계산하고 출력함..
       - id: calculate
@@ -29,3 +31,9 @@ jobs:
       - id: use
         run: |
           echo "결과: ${{ steps.calculate.outputs.result }}"
+
+  job-c:
+    needs: example
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "이러면 example(job)에서의 변수도 쓸 수 있는 건가? ${{ needs.example.outputs.result }}"
