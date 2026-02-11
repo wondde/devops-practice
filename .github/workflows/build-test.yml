@@ -12,11 +12,12 @@ jobs:
       # 소스 코드 체크아웃
       - uses: actions/checkout@v4
 
-      # Flutter SDK 설정
+      # Flutter SDK 설정 (pub 캐싱 활성화)
       - name: Flutter 설정
         uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.38.8"
+          cache: true
 
       # 프로젝트의 의존성 설치
       - name: 의존성 설치
