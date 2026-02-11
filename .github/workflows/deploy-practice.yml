@@ -1,0 +1,17 @@
+name: 배포 연습
+
+on:
+  push:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    #조건 main 브랜치일 때만
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: deploy
+        run: echo "배포 중입니다........."
