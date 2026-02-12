@@ -1,0 +1,22 @@
+name: 버전 범프 테스트
+
+on: push
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 버전 읽기
+        run: |
+          CURRENT=$(cat version.txt)
+          echo "현재 버전: $CURRENT"
+
+      - name: 버전 수정
+        run: |
+          echo "0.0.2" > version.txt
+
+          NEW=$(cat version.txt)
+          echo "새버전: $NEW"
