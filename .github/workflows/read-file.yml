@@ -13,6 +13,7 @@ jobs:
         run: |
           echo "===파일을 읽어옴==="
           cat test_data.txt
+          echo
 
-          echo "==모든 파일 정보"
+          echo "==모든 파일 정보=="
           ls -la
