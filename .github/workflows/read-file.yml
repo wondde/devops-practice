@@ -1,0 +1,18 @@
+name: Read File
+
+on: push
+
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Read File
+        run: |
+          echo "===파일을 읽어옴==="
+          cat test_data.txt
+
+          echo "==모든 파일 정보"
+          ls -la
